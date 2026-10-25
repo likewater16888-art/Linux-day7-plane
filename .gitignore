@@ -1,0 +1,9 @@
+# 临时验证产物（headless Chrome dump / 校验脚本）
+_*.html
+_check*.js
+*.zip
+
+# 系统垃圾
+.DS_Store
+Thumbs.db
+desktop.ini

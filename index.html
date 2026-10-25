@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Linux 三天学习总结的可视化知识库：基础命令、查看与文本处理、权限与进程" />
+<title>Linux 三日通关 · 可视化知识库</title>
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#/overview">
+      <span class="brand-mark">🐧</span>
+      <span class="brand-text">
+        <strong id="brandTitle">Linux 三日通关</strong>
+        <small>可视化知识库</small>
+      </span>
+    </a>
+
+    <label class="search">
+      <span class="search-ico">🔍</span>
+      <input id="search" type="search" placeholder="搜索命令 / 报错 / 口诀" autocomplete="off" spellcheck="false" aria-label="搜索知识库" />
+      <kbd>/</kbd>
+    </label>
+
+    <nav class="nav" id="nav" aria-label="知识库导航">
+      <p class="nav-label">总览</p>
+      <a class="nav-item" href="#/overview" data-view="overview"><span class="nav-ico">🗺️</span>知识地图</a>
+      <a class="nav-item" href="#/cheatsheet" data-view="cheatsheet"><span class="nav-ico">📋</span>命令速查</a>
+      <a class="nav-item" href="#/lab" data-view="lab"><span class="nav-ico">🧪</span>权限实验室</a>
+
+      <p class="nav-label" id="navDaysLabel">3 天历程</p>
+      <div id="dayNav"></div>
+
+      <p class="nav-label">工具</p>
+      <button class="nav-item nav-btn" id="themeToggle" type="button"><span class="nav-ico">🌗</span>切换主题</button>
+      <button class="nav-item nav-btn" id="printBtn" type="button"><span class="nav-ico">🖨️</span>打印 / 存 PDF</button>
+      <p class="nav-tip"><kbd>/</kbd> 搜索 · <kbd>Esc</kbd> 退出搜索</p>
+    </nav>
+
+    <p class="sidebar-foot">
+      <span id="sourceNote">内容来源：DAY 1 – DAY 3 学习总结</span><br />
+      纯静态 · 离线可用 · 无外部依赖
+    </p>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="menuBtn" type="button" aria-label="打开菜单">☰</button>
+      <div class="crumbs" id="crumbs">知识地图</div>
+      <div class="topbar-meta" id="topbarMeta"></div>
+    </header>
+
+    <div class="view" id="view" tabindex="-1"></div>
+
+    <footer class="foot">
+      <span id="footTitle">Linux 三日通关 · 可视化知识库</span>
+      <span id="footMeta"></span>
+    </footer>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/data.js"></script>
+
+<!-- 新增一天（可选方案）：把 days/_template.js 复制成 days/day4.js 并填好内容，
+     然后去掉下面这行的注释即可；不拆文件的话，直接往 assets/data.js 的 days 数组里追加对象也一样。 -->
+<!-- <script src="days/day4.js"></script> -->
+
+<script src="assets/app.js"></script>
+</body>
+</html>
